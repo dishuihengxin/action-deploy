@@ -1,0 +1,18 @@
+name: 'Deploy action for GitHub Pages'
+description: 'A GitHub Action to deploy your static site to GitHub Pages with Static Site Generator'
+author: 'kalid'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'upload-cloud'
+  color: 'blue'
+inputs:
+  emptyCommits:
+    description: 'If empty commits should be made to the publication branch'
+    required: false
+    default: 'true'
+  keepFiles:
+    description: 'If existing files in the publish branch should be not removed before deploying'
+    required: false
+    default: 'false'
